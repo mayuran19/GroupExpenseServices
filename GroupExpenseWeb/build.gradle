@@ -1,0 +1,36 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+
+}
+
+configurations {
+
+}
+
+dependencies {
+	compile project(':GroupExpenseCore')
+	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
+	
+	//jstl tag lib
+  	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+  	
+  	//Provided dependencies. No need to include in the war file as it will be provided by servlet container
+  	providedCompile("javax.servlet:javax.servlet-api:3.1.0")
+}
+
+war {
+	baseName = "GroupExpenseWeb"
+}
+
+// Embeded Jetty for testing
+jettyRun{
+	contextPath = "GroupExpenseWeb"
+	httpPort = 8080
+}
+
+jettyRunWar{
+	contextPath = "GroupExpenseWeb"
+	httpPort = 8080
+}
