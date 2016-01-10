@@ -9,7 +9,7 @@
     </context-param>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>com.mayuran19.groupExpense.web.config.WebAppConfig</param-value>
+        <param-value>com.mayuran19.groupExpense.web.config.RootAppConfig</param-value>
     </context-param>
     <servlet>
         <servlet-name>services</servlet-name>
@@ -20,7 +20,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>com.mayuran19.groupExpense.web.config.WebServicesServletConfig</param-value>
+            <param-value>com.mayuran19.groupExpense.web.config.ServicesServletConfig</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

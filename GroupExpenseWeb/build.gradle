@@ -12,7 +12,9 @@ configurations {
 dependencies {
 	compile project(':GroupExpenseCore')
 	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
-	
+	compile 'org.springframework.security:spring-security-web:4.0.3.RELEASE'
+	compile 'org.springframework.security:spring-security-config:4.0.3.RELEASE'
+
 	//jstl tag lib
   	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
   	
