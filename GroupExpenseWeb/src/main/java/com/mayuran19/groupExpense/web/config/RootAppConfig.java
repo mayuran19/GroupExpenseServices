@@ -5,9 +5,11 @@ import org.springframework.context.annotation.Import;
 
 /**
  * Created by mayuran on 1/4/16.
+ * This class is used to configure whole application related settings. This class is registered
+ * in RootAppInitializer
  */
 @Configuration
-@Import({SecurityConfig.class})
+@Import({WebSecurityConfig.class, APISecurityConfig.class})
 public class RootAppConfig {
 
 }
