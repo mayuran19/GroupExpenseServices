@@ -22,7 +22,7 @@ import java.util.List;
 @ImportResource({})
 @ComponentScan(basePackages = {"com.mayuran19.groupExpense.web.controller"})
 @EnableWebMvc
-public class ServicesServletConfig extends WebMvcConfigurerAdapter {
+public class APIServletConfig extends WebMvcConfigurerAdapter {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         converters.add(converter());

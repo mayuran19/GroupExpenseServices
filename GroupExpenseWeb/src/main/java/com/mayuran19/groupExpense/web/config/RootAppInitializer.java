@@ -26,13 +26,13 @@ public class RootAppInitializer implements WebApplicationInitializer {
         servletContext.addListener(new ContextLoaderListener(rootContext));
 
         /*
-        Add a DispatcherServlet for "/services" context
+        Add a DispatcherServlet for "/api" context
          */
         AnnotationConfigWebApplicationContext servicesContext = new AnnotationConfigWebApplicationContext();
         servicesContext.setParent(rootContext);
-        servicesContext.register(ServicesServletConfig.class);
+        servicesContext.register(APIServletConfig.class);
         ServletRegistration.Dynamic servicesDispatchServlet = servletContext.addServlet("services", new DispatcherServlet(servicesContext));
         servicesDispatchServlet.setLoadOnStartup(1);
-        servicesDispatchServlet.addMapping("/services/*");
+        servicesDispatchServlet.addMapping("/api/*");
     }
 }
